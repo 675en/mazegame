@@ -69,3 +69,5 @@ def display_maze(maze, player_pos, start, end):
         if maze[new_y][new_x] == ' ' or (new_y, new_x) == end:
             player_pos[0], player_pos[1] = new_y, new_x
             move_count += 1
+            if name == "__main__":
+    play()
