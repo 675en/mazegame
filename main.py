@@ -33,3 +33,19 @@ def display_maze(maze, player_pos, start, end):
                 row += maze[y][x]
         print(row)
     print()
+    def play():
+    print("Добро пожаловать в лабиринт!")
+    print("Управление: W (вверх), A (влево), S (вниз), D (вправо)\n")
+
+    maze = generate_maze(ROWS, COLS)
+    start = (1, 1)
+    end = (ROWS - 2, COLS - 2)
+    player_pos = list(start)
+    move_count = 0
+
+    while True:
+        display_maze(maze, tuple(player_pos), start, end)
+
+        if tuple(player_pos) == end:
+            print(f"🎉 Вы прошли лабиринт за {move_count} ходов!")
+            break
